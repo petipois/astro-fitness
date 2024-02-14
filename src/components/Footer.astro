@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+const imageURL = "dumbbell.jpg";
+const bgStyle = { backgroundImage: `url('/images/${imageURL}')` };
+const content = [
+  {
+    heading: "Phone",
+    info: "(123) 456-7890",
+  },
+  {
+    heading: "Email",
+    info: "hello@reallygreatsite.com",
+  },
+];
+
+const social = [
+  {
+    icon: "mdi:facebook",
+  },
+  {
+    icon: "mdi:instagram",
+  },
+  {
+    icon: "mdi:twitter",
+  },
+];
+---
+
+<footer
+  class="bg-cover bg-no-repeat bg-gray-700 bg-blend-multiply"
+  style={bgStyle}
+>
+  <div class="p-36">
+    <h1 class="font-extrabold text-5xl tracking-wide pinkText">Contact Us</h1>
+    {
+      content.map((item) => (
+        <div class="flex pt-8">
+          <h1 class="pinkText text-2xl font-bold uppercase">{item.heading}</h1>
+          <p class="ml-8 text-xl text-white">{item.info}</p>
+          </div>
+      ))
+    }
+  <div class="flex pt-8">
+    <h1 class="pinkText text-2xl font-bold uppercase">Social</h1>
+    {
+        social.map((link) => (
+          <div class="inline-block">
+            <Icon name={link.icon} class="text-white text-2xl ml-6" />
+          </div>
+        ))
+      }
+  </div>
+</footer>

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Features from '../components/Features.astro';
+import Workouts from '../components/Workouts.astro';
+import Tips from '../components/Tips.astro';
+import Reviews from '../components/Reviews.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Live N Move">
+  <main >
+    <Hero callToAction="Get moving to get healthier" logoImage="logo.png" buttonText="Learn More"/>
+	<About />
+	<Features/>
+	<Workouts />
+	<Tips image="weightlift.jpg" />
+	<Reviews />
+	<Footer/>
+  </main>
+</Layout>

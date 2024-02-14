@@ -1,0 +1,42 @@
+---
+const reviews = [
+  {
+    author: "Frankie",
+    role: "Virtual Assistant",
+    quote:
+      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+  },
+  {
+    author: "Devin",
+    role: "Business Analyst",
+    quote:
+      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+  },
+  {
+    author: "Devin",
+    role: "Marketing Specialist",
+    quote:
+      "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services. ",
+  },
+];
+---
+
+<section class="py-12">
+  <h1 class="pinkText text-5xl font-extrabold uppercase text-center pb-8">
+    Reviews
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {
+      reviews.map((review) => (
+        <div class="m-4">
+          <div class="text-white p-16 rounded-xl border-2">
+            <p class="pb-4 text-2xl">{review.quote}</p>
+            <small class="pinkText text-lg font-bold">
+              {review.author},{review.role}
+            </small>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

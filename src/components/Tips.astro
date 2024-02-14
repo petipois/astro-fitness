@@ -1,0 +1,27 @@
+---
+import LearnBtn from "./LearnBtn.astro";
+interface Props {
+  image: string;
+}
+const { image } = Astro.props;
+---
+
+<header>
+  <section>
+    <div class="grid grid-cols-2 mx-auto p-8 text-center">
+      <div class="flex justify-center">
+        <img src={"/images/" + image} alt="" srcset="" class="w-80 object-cover rounded-r-2xl rounded-l-2xl" />
+      </div>
+      <div class="py-24 bg-white rounded-xl">
+        <h1 class="pinkText font-extrabold text-5xl tracking-tight">Wellness Tips</h1>
+        <p class="text-2xl pt-8 pb-4">
+          Talk about this product's most important feature or service.
+          Highlighting the most popular one works, too! Talk about this
+          product's most important feature or service. Highlighting the most
+          popular one works, too!
+        </p>
+        <LearnBtn buttonText="Learn More" />
+      </div>
+    </div>
+  </section>
+</header>

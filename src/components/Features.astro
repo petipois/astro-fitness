@@ -1,0 +1,32 @@
+---
+import ImageCard from "./ImageCard.astro";
+
+const features = [
+  {
+    imageURL: "feature_bell.png",
+    featureText:
+      "Write here a key feature of the app or software that is being advertised here.",
+  },
+  {
+    imageURL: "feature_shoe.png",
+    featureText:
+      "Write here a key feature of the app or software that is being advertised here.",
+  },
+  {
+    imageURL: "feature_heart.png",
+    featureText:
+      "Write here a key feature of the app or software that is being advertised here.",
+  },
+];
+---
+
+<section class="py-12 text-center mx-auto">
+  <h1 class="pinkText text-5xl font-extrabold uppercase">Key Features</h1>
+  <div class="grid grid-cols-1 md:grid-cols-3 items-center">
+    {
+      features.map((feature) => (
+        <ImageCard imageURL={feature.imageURL} text={feature.featureText} />
+      ))
+    }
+  </div>
+</section>

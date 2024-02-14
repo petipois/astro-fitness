@@ -1,0 +1,31 @@
+---
+import LearnBtn from "./LearnBtn.astro";
+interface Props {
+  callToAction: string;
+  buttonText: string;
+  logoImage:string;
+}
+const { callToAction, buttonText, logoImage } = Astro.props;
+---
+<header>
+  <section>
+    <nav class="pt-12 pl-8">
+      <ul><li><img src={"/images/"+logoImage} alt="" srcset="" /></li></ul>
+    </nav>
+    <div class="grid grid-cols-2 mx-auto p-8">
+      <div class="py-24 text-white">
+        <h1 class="font-extrabold text-7xl tracking-tight">
+       {callToAction}
+        </h1>
+        <p class="text-3xl pt-8 pb-4">
+          Make movement a part of your daily life with mini workouts and easy
+          exercises
+        </p>
+       <LearnBtn buttonText={buttonText}/>
+      </div>
+      <div>
+        <img src="/images/app_feature.png" alt="" srcset="" class="multiply" />
+      </div>
+    </div>
+  </section>
+</header>
