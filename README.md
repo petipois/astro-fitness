@@ -1,7 +1,3 @@
-# Astro fitness 
-```sh
-npm create astro@latest -- --template basics
-```
 
 ## 🚀 Project Structure
 
