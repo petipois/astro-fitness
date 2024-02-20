@@ -1,5 +1,4 @@
-# Astro Starter Kit: Basics
-
+# Astro fitness 
 ```sh
 npm create astro@latest -- --template basics
 ```
